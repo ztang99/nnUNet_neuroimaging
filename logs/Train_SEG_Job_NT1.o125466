@@ -1,0 +1,1366 @@
+
+
+Please cite the following paper when using nnUNet:
+
+Isensee, F., Jaeger, P.F., Kohl, S.A.A. et al. "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation." Nat Methods (2020). https://doi.org/10.1038/s41592-020-01008-z
+
+
+If you have questions or suggestions, feel free to open an issue at https://github.com/MIC-DKFZ/nnUNet
+
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed
+/scratch/tang.zitian/nnUNet_trained_models/nnUNet
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetPlansv2.1_verybig_plans_3D.pkl
+###############################################
+I am running the following nnUNet: 3d_fullres
+My trainer class is:  <class 'nnunet.training.network_training.nnUNetTrainer_NT1.nnUNetTrainer_NT1'>
+For that I will be using the following configuration:
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetPlansv2.1_verybig_plans_3D.pkl
+num_classes:  3
+modalities:  {0: 'T1', 1: 'T1ce', 2: 'T2', 3: 'FLAIR'}
+use_mask_for_norm OrderedDict([(0, True), (1, True), (2, True), (3, True)])
+keep_only_largest_region None
+min_region_size_per_class None
+min_size_per_class None
+normalization_schemes OrderedDict([(0, 'nonCT'), (1, 'nonCT'), (2, 'nonCT'), (3, 'nonCT')])
+stages...
+
+stage:  0
+{'batch_size': 3, 'num_pool_per_axis': [5, 5, 5], 'patch_size': array([160, 192, 160]), 'median_patient_size_in_voxels': array([139, 170, 136]), 'current_spacing': array([1., 1., 1.]), 'original_spacing': array([1., 1., 1.]), 'do_dummy_2D_data_aug': False, 'pool_op_kernel_sizes': [[2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2]], 'conv_kernel_sizes': [[3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]]}
+
+I am using stage 0 from these plans
+I am using sample dice + CE loss
+
+I am using data from this folder:  /scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig
+###############################################
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetPlansv2.1_verybig_plans_3D.pkl
+loading dataset
+loading all case properties
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00100.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00101.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00102.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00104.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00105.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00106.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00107.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00108.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00109.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00110.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00111.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00112.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00113.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00115.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00116.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00117.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00118.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00120.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00121.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00122.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00123.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00124.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00126.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00127.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00128.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00130.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00131.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00132.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00133.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00134.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00136.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00137.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00138.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00139.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00140.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00142.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00143.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00144.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00146.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00147.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00148.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00149.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00150.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00151.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00152.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00154.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00155.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00156.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00157.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00158.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00159.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00160.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00162.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00165.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00166.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00167.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00170.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00171.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00172.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00176.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00177.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00178.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00183.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00184.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00185.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00186.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00187.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00188.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00191.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00192.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00193.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00194.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00195.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00196.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00199.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00201.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00203.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00204.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00206.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00207.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00209.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00210.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00211.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00212.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00214.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00216.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00217.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00218.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00219.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00220.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00221.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00222.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00227.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00228.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00230.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00231.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00233.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00234.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00235.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00236.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00237.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00238.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00239.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00240.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00241.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00242.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00243.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00246.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00247.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00249.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00250.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00251.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00253.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00254.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00258.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00259.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00260.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00261.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00262.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00263.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00266.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00267.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00269.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00270.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00271.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00273.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00274.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00275.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00280.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00281.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00282.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00283.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00284.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00285.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00286.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00288.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00289.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00290.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00291.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00292.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00293.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00294.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00296.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00297.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00298.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00299.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00300.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00301.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00303.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00304.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00305.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00306.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00309.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00310.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00311.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00312.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00313.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00314.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00316.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00317.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00318.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00320.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00321.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00322.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00324.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00325.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00327.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00328.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00329.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00331.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00332.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00334.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00336.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00338.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00339.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00340.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00341.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00343.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00344.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00346.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00347.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00348.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00349.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00350.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00351.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00352.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00353.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00356.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00359.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00360.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00364.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00366.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00367.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00369.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00370.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00371.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00373.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00375.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00376.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00377.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00378.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00379.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00380.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00382.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00383.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00386.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00387.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00388.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00389.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00390.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00391.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00392.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00395.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00397.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00399.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00400.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00401.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00402.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00403.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00404.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00405.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00406.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00407.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00409.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00410.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00412.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00413.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00414.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00416.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00417.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00418.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00419.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00421.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00423.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00425.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00426.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00429.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00430.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00431.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00432.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00433.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00436.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00440.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00441.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00442.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00443.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00444.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00445.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00446.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00448.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00449.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00451.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00452.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00453.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00454.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00455.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00456.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00457.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00459.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00561.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00563.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00565.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00567.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00568.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00569.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00570.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00571.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00572.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00574.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00575.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00576.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00577.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00578.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00579.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00580.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00581.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00582.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00583.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00584.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00586.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00587.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00588.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00589.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00590.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00591.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00593.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00594.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00596.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00597.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00598.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00599.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00780.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00781.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00782.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00784.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00787.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00788.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00789.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00791.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00792.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00793.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00795.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00796.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00797.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00799.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00800.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00801.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00802.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00803.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00804.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00805.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00806.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00807.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00808.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00809.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00810.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00811.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00814.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00816.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00818.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00819.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00820.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00823.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00824.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00828.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00830.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00831.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00834.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00836.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00837.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00838.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00839.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00840.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_00999.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01000.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01001.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01002.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01003.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01004.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01005.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01007.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01008.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01009.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01010.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01011.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01012.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01013.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01014.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01015.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01016.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01017.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01018.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01019.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01020.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01021.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01022.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01023.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01024.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01025.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01026.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01029.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01030.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01031.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01032.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01033.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01034.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01036.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01037.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01038.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01039.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01040.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01041.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01042.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01043.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01044.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01045.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01046.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01047.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01048.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01049.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01050.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01051.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01052.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01053.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01054.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01055.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01056.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01057.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01058.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01059.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01060.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01061.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01062.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01063.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01064.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01065.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01066.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01067.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01068.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01069.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01070.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01071.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01072.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01073.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01074.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01075.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01076.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01077.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01078.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01079.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01080.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01081.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01082.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01083.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01084.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01085.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01086.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01087.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01088.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01089.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01090.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01091.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01092.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01093.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01094.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01095.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01096.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01097.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01098.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01099.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01100.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01101.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01102.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01103.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01104.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01105.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01106.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01107.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01108.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01109.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01110.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01111.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01112.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01113.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01114.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01115.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01116.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01117.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01118.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01119.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01120.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01121.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01122.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01123.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01124.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01125.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01126.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01127.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01128.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01129.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01130.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01131.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01132.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01133.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01134.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01135.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01136.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01137.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01138.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01139.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01140.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01141.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01142.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01143.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01144.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01145.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01146.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01147.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01148.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01149.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01150.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01151.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01152.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01162.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01163.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01164.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01165.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01166.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01167.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01168.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01169.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01170.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01171.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01172.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01173.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01174.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01175.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01176.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01177.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01178.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01179.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01180.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01181.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01182.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01183.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01184.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01185.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01186.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01187.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01188.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01189.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01190.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01191.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01192.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01193.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01194.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01195.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01196.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01197.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01198.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01199.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01200.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01201.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01202.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01203.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01204.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01205.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01206.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01207.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01208.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01209.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01210.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01211.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01212.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01213.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01214.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01215.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01216.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01217.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01218.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01219.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01220.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01221.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01222.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01223.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01224.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01225.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01226.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01227.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01228.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01229.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01230.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01231.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01232.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01233.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01234.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01235.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01236.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01237.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01238.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01239.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01240.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01241.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01242.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01243.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01244.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01245.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01246.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01247.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01248.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01249.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01250.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01251.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01252.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01253.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01254.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01255.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01256.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01257.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01258.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01259.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01260.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01261.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01262.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01263.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01264.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01265.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01266.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01267.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01268.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01269.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01270.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01271.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01272.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01273.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01274.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01275.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01276.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01277.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01278.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01279.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01280.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01281.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01282.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01283.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01284.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01285.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01286.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01287.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01288.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01289.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01290.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01291.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01292.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01293.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01294.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01295.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01296.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01297.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01298.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01299.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01300.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01301.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01302.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01303.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01304.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01305.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01306.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01307.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01308.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01309.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01310.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01311.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01312.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01313.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01314.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01315.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01316.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01317.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01318.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01319.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01320.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01321.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01322.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01323.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01324.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01325.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01326.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01327.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01328.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01329.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01330.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01331.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01332.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01333.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01334.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01335.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01336.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01337.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01338.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01339.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01340.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01341.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01342.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01343.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01344.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01345.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01346.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01347.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01348.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01349.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01350.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01351.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01352.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01353.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01354.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01355.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01356.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01357.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01358.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01359.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01360.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01361.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01362.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01363.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01364.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01365.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01366.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01367.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01368.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01369.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01370.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01371.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01372.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01373.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01374.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01375.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01376.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01377.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01378.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01379.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01380.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01381.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01382.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01383.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01384.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01385.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01386.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01387.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01388.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01389.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01390.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01391.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01392.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01393.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01394.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01395.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01396.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01397.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01398.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01399.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01400.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01401.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01402.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01403.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01404.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01405.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01406.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01407.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01408.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01409.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01410.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01411.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01412.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01413.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01414.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01415.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01416.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01417.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01418.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01419.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01420.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01421.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01422.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01423.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01424.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01425.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01426.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01427.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01428.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01429.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01430.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01431.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01432.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01433.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01434.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01435.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01436.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01437.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01438.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01439.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01440.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01441.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01442.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01443.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01444.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01445.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01446.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01447.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01448.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01449.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01450.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01451.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01452.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01453.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01454.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01455.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01456.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01457.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01458.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01459.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01460.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01461.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01462.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01463.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01464.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01465.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01466.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01467.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01468.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01469.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01470.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01471.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01472.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01473.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01474.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01475.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01476.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01477.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01478.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01479.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01480.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01481.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01482.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01483.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01484.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01485.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01486.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01487.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01488.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01489.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01490.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01491.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01492.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01493.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01494.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01495.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01496.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01497.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01498.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01499.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01500.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01501.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01502.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01503.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01504.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01505.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01506.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01507.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01508.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01509.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01510.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01511.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01512.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01513.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01514.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01515.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01516.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01517.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01518.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01519.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01520.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01521.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01522.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01523.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01524.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01525.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01526.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01527.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01528.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01529.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01530.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01531.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01532.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01533.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01534.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01535.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01536.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01537.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01657.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01658.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01659.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01660.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01661.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01662.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01663.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01664.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01665.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/nnUNetData_plans_v2.1_verybig_stage0/BraTS2021_01666.pkl
+2022-09-23 14:25:59.311269: Using splits from existing split file: /scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/splits_final.pkl
+/scratch/peijie.qiu/dataset/nnUNet_preprocessed/Task101_BraTS2021/splits_final.pkl
+2022-09-23 14:25:59.315152: The split file contains 5 splits.
+2022-09-23 14:25:59.316126: Desired fold for training: 1
+2022-09-23 14:25:59.317052: This split has 695 training and 174 validation cases.
+unpacking dataset
+done
+2022-09-23 14:26:03.132022: lr: 0.001
+/scratch/tang.zitian/nnUNet_trained_models/nnUNet/3d_fullres/Task101_BraTS2021/nnUNetTrainer_NT1__nnUNetPlansv2.1_verybig/fold_1
+using pin_memory on device 0
+using pin_memory on device 0
+2022-09-23 14:26:34.031715: Unable to plot network architecture:
+2022-09-23 14:26:34.033255: No module named 'hiddenlayer'
+2022-09-23 14:26:34.034717: 
+printing the network instead:
+
+2022-09-23 14:26:34.035785: Generic_UNet(
+  (conv_blocks_localization): ModuleList(
+    (0): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(640, 320, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(320, 320, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+    (1): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(512, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+    (2): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(256, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+    (3): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(128, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+    (4): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(64, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(32, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+  )
+  (conv_blocks_context): ModuleList(
+    (0): StackedConvLayers(
+      (blocks): Sequential(
+        (0): ConvDropoutNormNonlin(
+          (conv): Conv3d(3, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          (instnorm): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+        (1): ConvDropoutNormNonlin(
+          (conv): Conv3d(32, 32, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          (instnorm): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+      )
+    )
+    (1): StackedConvLayers(
+      (blocks): Sequential(
+        (0): ConvDropoutNormNonlin(
+          (conv): Conv3d(32, 64, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+          (instnorm): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+        (1): ConvDropoutNormNonlin(
+          (conv): Conv3d(64, 64, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          (instnorm): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+      )
+    )
+    (2): StackedConvLayers(
+      (blocks): Sequential(
+        (0): ConvDropoutNormNonlin(
+          (conv): Conv3d(64, 128, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+          (instnorm): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+        (1): ConvDropoutNormNonlin(
+          (conv): Conv3d(128, 128, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          (instnorm): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+      )
+    )
+    (3): StackedConvLayers(
+      (blocks): Sequential(
+        (0): ConvDropoutNormNonlin(
+          (conv): Conv3d(128, 256, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+          (instnorm): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+        (1): ConvDropoutNormNonlin(
+          (conv): Conv3d(256, 256, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          (instnorm): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+      )
+    )
+    (4): StackedConvLayers(
+      (blocks): Sequential(
+        (0): ConvDropoutNormNonlin(
+          (conv): Conv3d(256, 320, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+          (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+        (1): ConvDropoutNormNonlin(
+          (conv): Conv3d(320, 320, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+          (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+      )
+    )
+    (5): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(320, 320, kernel_size=(3, 3, 3), stride=(2, 2, 2), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(320, 320, kernel_size=(3, 3, 3), stride=(1, 1, 1), padding=(1, 1, 1))
+            (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+  )
+  (td): ModuleList()
+  (tu): ModuleList(
+    (0): ConvTranspose3d(320, 320, kernel_size=(2, 2, 2), stride=(2, 2, 2), bias=False)
+    (1): ConvTranspose3d(320, 256, kernel_size=(2, 2, 2), stride=(2, 2, 2), bias=False)
+    (2): ConvTranspose3d(256, 128, kernel_size=(2, 2, 2), stride=(2, 2, 2), bias=False)
+    (3): ConvTranspose3d(128, 64, kernel_size=(2, 2, 2), stride=(2, 2, 2), bias=False)
+    (4): ConvTranspose3d(64, 32, kernel_size=(2, 2, 2), stride=(2, 2, 2), bias=False)
+  )
+  (seg_outputs): ModuleList(
+    (0): Conv3d(320, 4, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (1): Conv3d(256, 4, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (2): Conv3d(128, 4, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (3): Conv3d(64, 4, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (4): Conv3d(32, 4, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+  )
+)
+2022-09-23 14:26:34.039262: 
+
+2022-09-23 14:26:34.041094: 
+epoch:  0
+2022-09-23 14:30:02.972988: train loss : 0.4871
+2022-09-23 14:30:31.163745: validation loss: -0.1367
+2022-09-23 14:30:31.167332: Average global foreground Dice: [0.3039, 0.0229, 0.1603]
+2022-09-23 14:30:31.168919: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 14:30:31.782378: lr: 0.000998
+2022-09-23 14:30:31.784588: This epoch took 237.742421 s
+
+2022-09-23 14:30:31.786203: 
+epoch:  1
+2022-09-23 14:33:23.389320: train loss : -0.2608
+2022-09-23 14:33:49.418087: validation loss: -0.3475
+2022-09-23 14:33:49.420257: Average global foreground Dice: [0.6405, 0.153, 0.6562]
+2022-09-23 14:33:49.421177: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 14:33:50.130252: lr: 0.000996
+2022-09-23 14:33:50.183380: saving checkpoint...
+2022-09-23 14:33:50.485926: done, saving took 0.35 seconds
+2022-09-23 14:33:50.489908: This epoch took 198.702123 s
+
+2022-09-23 14:33:50.491766: 
+epoch:  2
+2022-09-23 14:36:34.017854: train loss : -0.4275
+2022-09-23 14:36:59.655134: validation loss: -0.4288
+2022-09-23 14:36:59.657761: Average global foreground Dice: [0.6579, 0.412, 0.7487]
+2022-09-23 14:36:59.659653: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 14:37:00.338148: lr: 0.000995
+2022-09-23 14:37:00.386574: saving checkpoint...
+2022-09-23 14:37:00.737359: done, saving took 0.40 seconds
+2022-09-23 14:37:00.740700: This epoch took 190.239397 s
+
+2022-09-23 14:37:00.742027: 
+epoch:  3
+2022-09-23 14:39:32.000014: train loss : -0.4845
+2022-09-23 14:39:57.777238: validation loss: -0.4840
+2022-09-23 14:39:57.780038: Average global foreground Dice: [0.7012, 0.4644, 0.7525]
+2022-09-23 14:39:57.781297: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 14:39:58.468119: lr: 0.000993
+2022-09-23 14:39:58.515728: saving checkpoint...
+2022-09-23 14:39:58.805418: done, saving took 0.34 seconds
+2022-09-23 14:39:58.809046: This epoch took 178.066163 s
+
+2022-09-23 14:39:58.810329: 
+epoch:  4
+2022-09-23 14:42:30.770986: train loss : -0.5407
+2022-09-23 14:43:01.084044: validation loss: -0.5727
+2022-09-23 14:43:01.087254: Average global foreground Dice: [0.7309, 0.5795, 0.7789]
+2022-09-23 14:43:01.088718: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 14:43:01.701353: lr: 0.000991
+2022-09-23 14:43:01.806526: saving checkpoint...
+2022-09-23 14:43:02.120540: done, saving took 0.41 seconds
+2022-09-23 14:43:02.123693: This epoch took 183.312228 s
+
+2022-09-23 14:43:02.125116: 
+epoch:  5
+2022-09-23 14:45:26.061512: train loss : -0.5789
+2022-09-23 14:45:57.115176: validation loss: -0.5835
+2022-09-23 14:45:57.118384: Average global foreground Dice: [0.749, 0.6353, 0.7941]
+2022-09-23 14:45:57.119462: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 14:45:57.701226: lr: 0.000989
+2022-09-23 14:45:57.743634: saving checkpoint...
+2022-09-23 14:45:58.057254: done, saving took 0.35 seconds
+2022-09-23 14:45:58.059690: This epoch took 175.933400 s
+
+2022-09-23 14:45:58.061330: 
+epoch:  6
+2022-09-23 14:48:50.723362: train loss : -0.6041
+2022-09-23 14:49:18.736054: validation loss: -0.6203
+2022-09-23 14:49:18.739174: Average global foreground Dice: [0.7803, 0.6861, 0.824]
+2022-09-23 14:49:18.740239: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 14:49:19.339172: lr: 0.000987
+2022-09-23 14:49:19.385692: saving checkpoint...
+2022-09-23 14:49:19.670583: done, saving took 0.33 seconds
+2022-09-23 14:49:19.673314: This epoch took 201.611035 s
+
+2022-09-23 14:49:19.674851: 
+epoch:  7
+2022-09-23 14:51:45.869041: train loss : -0.6334
+2022-09-23 14:52:11.908494: validation loss: -0.6579
+2022-09-23 14:52:11.911609: Average global foreground Dice: [0.8049, 0.7107, 0.8215]
+2022-09-23 14:52:11.912898: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 14:52:12.540707: lr: 0.000986
+2022-09-23 14:52:12.592406: saving checkpoint...
+2022-09-23 14:52:12.907608: done, saving took 0.36 seconds
+2022-09-23 14:52:12.910048: This epoch took 173.234134 s
+
+2022-09-23 14:52:12.911850: 
+epoch:  8
+2022-09-23 14:54:58.009206: train loss : -0.6184
+2022-09-23 14:55:28.294734: validation loss: -0.6637
+2022-09-23 14:55:28.298286: Average global foreground Dice: [0.7959, 0.689, 0.8261]
+2022-09-23 14:55:28.299717: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 14:55:29.184313: lr: 0.000984
+2022-09-23 14:55:29.218361: saving checkpoint...
+2022-09-23 14:55:29.490117: done, saving took 0.30 seconds
+2022-09-23 14:55:29.492329: This epoch took 196.579429 s
+
+2022-09-23 14:55:29.493422: 
+epoch:  9
+2022-09-23 14:58:12.003685: train loss : -0.6365
+2022-09-23 14:58:41.290496: validation loss: -0.6329
+2022-09-23 14:58:41.293093: Average global foreground Dice: [0.7903, 0.6889, 0.8255]
+2022-09-23 14:58:41.294208: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 14:58:41.866376: lr: 0.000982
+2022-09-23 14:58:41.900490: saving checkpoint...
+2022-09-23 14:58:42.253499: done, saving took 0.39 seconds
+2022-09-23 14:58:42.255465: This epoch took 192.760969 s
+
+2022-09-23 14:58:42.256395: 
+epoch:  10
+2022-09-23 15:01:16.231822: train loss : -0.6479
+2022-09-23 15:01:45.732187: validation loss: -0.6524
+2022-09-23 15:01:45.735106: Average global foreground Dice: [0.8005, 0.7019, 0.8192]
+2022-09-23 15:01:45.736231: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 15:01:46.333768: lr: 0.00098
+2022-09-23 15:01:46.368218: saving checkpoint...
+2022-09-23 15:01:46.700585: done, saving took 0.36 seconds
+2022-09-23 15:01:46.702182: This epoch took 184.444896 s
+
+2022-09-23 15:01:46.703507: 
+epoch:  11
+2022-09-23 15:04:30.674712: train loss : -0.6597
+2022-09-23 15:04:59.799444: validation loss: -0.6548
+2022-09-23 15:04:59.802383: Average global foreground Dice: [0.8185, 0.7073, 0.8254]
+2022-09-23 15:04:59.803496: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 15:05:00.447347: lr: 0.000978
+2022-09-23 15:05:00.480071: saving checkpoint...
+2022-09-23 15:05:00.796184: done, saving took 0.35 seconds
+2022-09-23 15:05:00.797339: This epoch took 194.092925 s
+
+2022-09-23 15:05:00.798450: 
+epoch:  12
+2022-09-23 15:07:36.944370: train loss : -0.6655
+2022-09-23 15:08:01.625317: validation loss: -0.6505
+2022-09-23 15:08:01.634480: Average global foreground Dice: [0.807, 0.7148, 0.8369]
+2022-09-23 15:08:01.636401: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 15:08:02.251540: lr: 0.000977
+2022-09-23 15:08:02.284797: saving checkpoint...
+2022-09-23 15:08:02.567486: done, saving took 0.31 seconds
+2022-09-23 15:08:02.568733: This epoch took 181.769316 s
+
+2022-09-23 15:08:02.569757: 
+epoch:  13
+2022-09-23 15:10:37.265090: train loss : -0.6787
+2022-09-23 15:11:08.541781: validation loss: -0.6818
+2022-09-23 15:11:08.544933: Average global foreground Dice: [0.8233, 0.7417, 0.8328]
+2022-09-23 15:11:08.545935: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 15:11:09.268317: lr: 0.000975
+2022-09-23 15:11:09.301574: saving checkpoint...
+2022-09-23 15:11:09.576785: done, saving took 0.31 seconds
+2022-09-23 15:11:09.578656: This epoch took 187.007851 s
+
+2022-09-23 15:11:09.580132: 
+epoch:  14
+2022-09-23 15:13:48.344386: train loss : -0.6762
+2022-09-23 15:14:19.852718: validation loss: -0.6910
+2022-09-23 15:14:19.855712: Average global foreground Dice: [0.8155, 0.7554, 0.857]
+2022-09-23 15:14:19.857007: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 15:14:20.448244: lr: 0.000973
+2022-09-23 15:14:20.482238: saving checkpoint...
+2022-09-23 15:14:20.812017: done, saving took 0.36 seconds
+2022-09-23 15:14:20.814509: This epoch took 191.233001 s
+
+2022-09-23 15:14:20.815973: 
+epoch:  15
+2022-09-23 15:16:52.029862: train loss : -0.6755
+2022-09-23 15:17:16.868000: validation loss: -0.6839
+2022-09-23 15:17:16.871458: Average global foreground Dice: [0.8254, 0.7309, 0.8345]
+2022-09-23 15:17:16.873823: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 15:17:17.497911: lr: 0.000971
+2022-09-23 15:17:17.543289: saving checkpoint...
+2022-09-23 15:17:17.823846: done, saving took 0.32 seconds
+2022-09-23 15:17:17.826650: This epoch took 177.009759 s
+
+2022-09-23 15:17:17.828176: 
+epoch:  16
+2022-09-23 15:19:42.206882: train loss : -0.6920
+2022-09-23 15:20:09.151378: validation loss: -0.6625
+2022-09-23 15:20:09.154536: Average global foreground Dice: [0.8207, 0.745, 0.8495]
+2022-09-23 15:20:09.155882: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 15:20:09.869956: lr: 0.000969
+2022-09-23 15:20:09.903451: saving checkpoint...
+2022-09-23 15:20:10.212923: done, saving took 0.34 seconds
+2022-09-23 15:20:10.214935: This epoch took 172.385578 s
+
+2022-09-23 15:20:10.215980: 
+epoch:  17
+2022-09-23 15:22:38.802394: train loss : -0.7092
+2022-09-23 15:23:07.492185: validation loss: -0.7197
+2022-09-23 15:23:07.495148: Average global foreground Dice: [0.844, 0.7846, 0.855]
+2022-09-23 15:23:07.496382: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 15:23:08.131603: lr: 0.000968
+2022-09-23 15:23:08.165004: saving checkpoint...
+2022-09-23 15:23:08.552549: done, saving took 0.42 seconds
+2022-09-23 15:23:08.554954: This epoch took 178.338036 s
+
+2022-09-23 15:23:08.555924: 
+epoch:  18
+2022-09-23 15:25:40.196744: train loss : -0.6753
+2022-09-23 15:26:08.004037: validation loss: -0.7074
+2022-09-23 15:26:08.006203: Average global foreground Dice: [0.8243, 0.756, 0.8478]
+2022-09-23 15:26:08.007461: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 15:26:08.701599: lr: 0.000966
+2022-09-23 15:26:08.736302: saving checkpoint...
+2022-09-23 15:26:09.081068: done, saving took 0.38 seconds
+2022-09-23 15:26:09.083059: This epoch took 180.526067 s
+
+2022-09-23 15:26:09.084268: 
+epoch:  19
+2022-09-23 15:28:52.303633: train loss : -0.7028
+2022-09-23 15:29:16.623613: validation loss: -0.6938
+2022-09-23 15:29:16.626897: Average global foreground Dice: [0.833, 0.7609, 0.8558]
+2022-09-23 15:29:16.628297: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 15:29:17.230014: lr: 0.000964
+2022-09-23 15:29:17.263193: saving checkpoint...
+2022-09-23 15:29:17.538221: done, saving took 0.31 seconds
+2022-09-23 15:29:17.539770: This epoch took 188.454498 s
+
+2022-09-23 15:29:17.540871: 
+epoch:  20
+2022-09-23 15:32:05.346542: train loss : -0.6743
+2022-09-23 15:32:37.526846: validation loss: -0.6741
+2022-09-23 15:32:37.529893: Average global foreground Dice: [0.829, 0.7255, 0.8441]
+2022-09-23 15:32:37.531173: (interpret this as an estimate for the Dice of the different classes. This is not exact.)
+2022-09-23 15:32:38.312617: lr: 0.000962
+2022-09-23 15:32:38.346295: saving checkpoint...
+2022-09-23 15:32:38.648765: done, saving took 0.33 seconds
+2022-09-23 15:32:38.650953: This epoch took 201.109028 s
+
+2022-09-23 15:32:38.652025: 
+epoch:  21

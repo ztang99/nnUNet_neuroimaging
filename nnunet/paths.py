@@ -28,7 +28,10 @@ PLEASE READ paths.md FOR INFORMATION TO HOW TO SET THIS UP
 
 base = os.environ['nnUNet_raw_data_base'] if "nnUNet_raw_data_base" in os.environ.keys() else None
 preprocessing_output_dir = os.environ['nnUNet_preprocessed'] if "nnUNet_preprocessed" in os.environ.keys() else None
+# preprocessing_output_dir = preprocessing_output_dir[1:-1]
 network_training_output_dir_base = os.path.join(os.environ['RESULTS_FOLDER']) if "RESULTS_FOLDER" in os.environ.keys() else None
+
+print(preprocessing_output_dir)
 
 if base is not None:
     nnUNet_raw_data = join(base, "nnUNet_raw_data")
@@ -56,3 +59,4 @@ else:
           "inference. If this is not intended behavior, please read documentation/setting_up_paths.md for information on how to set this "
           "up.")
     network_training_output_dir = None
+print(network_training_output_dir)
