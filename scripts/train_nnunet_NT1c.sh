@@ -1,8 +1,8 @@
 #!/bin/bash
 ######## Job Name: Test_Job ########
-#SBATCH -J Train_SEG_Job_NT1c
-#SBATCH -o logs/Train_SEG_Job_NT1c.o%j
-#SBATCH -e logs/Train_SEG_Job_NT1c.e%j
+#SBATCH -J Train_NT1c
+#SBATCH -o logs/Train_NT1c.o%j
+#SBATCH -e logs/Train_NT1c.e%j
 ######## Number of nodes: 1 ########
 #SBATCH -N 1
 #SBATCH -n 1
@@ -18,5 +18,5 @@ cd /home/tang.zitian/nnUNet
 module load cuda/11.3
 source activate base
 
-nnunet_use_progress_bar=1 nnUNet_n_proc_DA=10 nnUNet_train 3d_fullres nnUNetTrainer_NT1c Task101_BraTS2021 1 --npz -p nnUNetPlansv2.1_verybig
+nnunet_use_progress_bar=1 nnUNet_n_proc_DA=10 nnUNet_train 3d_fullres nnUNetTrainer_NT1c Task200_BraTS2021 1 --npz -p nnUNetPlansv2.1_verybig
 
