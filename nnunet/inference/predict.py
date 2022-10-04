@@ -180,6 +180,13 @@ def predict_cases(model, list_of_lists, output_filenames, folds, save_npz, num_t
     print("emptying cuda cache")
     torch.cuda.empty_cache()
 
+    """
+    ZT@9/30/22
+    we can probably change here to make sure we predict only folds that are not missiong
+    challenges: how to determine which modalities the current image has?
+    do we need to call this func multiple times? maybe modify the __main__ func
+    """
+
     print("loading parameters for folds,", folds)
     trainer, params = load_model_and_checkpoint_files(model, folds, mixed_precision=mixed_precision,
                                                       checkpoint_name=checkpoint_name)
@@ -830,6 +837,19 @@ if __name__ == "__main__":
         all_in_gpu = True
     elif all_in_gpu == "False":
         all_in_gpu = False
+
+    """
+    cannot use directly predict_from_folder since it will directly generate results (or can we just fuse existing
+    predictions after we get everything?)
+    Two possible ways to do this:
+    1: In each modes, before results.append() combine the results (but dunno how to do this :(((
+    2: After predict_from_folder generated all the results, see how the results are named (my guesses is that
+    somewhere in the middle they should have a substring of the patient ID that we can identify) try to read in the 
+    results (each pixel should be in probablities), get the average on each pixel and output the prediction file.
+    
+    Also needed: does nnUNet generate performance metrics itself or do we need to add code to handle this?
+    after we generate the 'fused result' we also need to compare it with the ground truth (maybe dice score?) not sure
+    """
 
     predict_from_folder(model, input_folder, output_folder, folds, save_npz, num_threads_preprocessing,
                         num_threads_nifti_save, lowres_segmentations, part_id, num_parts, tta,
