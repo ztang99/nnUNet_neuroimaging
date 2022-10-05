@@ -490,6 +490,14 @@ class nnUNetTrainer_T1(nnUNetTrainer):
         return continue_training
 
     def save_checkpoint(self, fname, save_optimizer=True):
+        info = OrderedDict()
+        info['init'] = self.init_args
+        info['name'] = self.__class__.__name__
+        info['class'] = str(self.__class__)
+        info['plans'] = self.plans
+
+        write_pickle(info, fname + ".pkl")
+        
         start_time = time()
         state_dict = self.network.state_dict()
         for key in state_dict.keys():

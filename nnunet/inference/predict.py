@@ -213,11 +213,11 @@ def predict_cases(model, list_of_lists, output_filenames, folds, save_npz, num_t
     for preprocessed in preprocessing:
         output_filename, (d, dct) = preprocessed
         all_output_files.append(all_output_files)
+        d = d[trainer.modal, ...]
         if isinstance(d, str):
             data = np.load(d)
             os.remove(d)
-            d = data
-
+            
         print("predicting", output_filename)
         trainer.load_checkpoint_ram(params[0], False)
         softmax = trainer.predict_preprocessed_data_return_seg_and_softmax(
@@ -271,6 +271,7 @@ def predict_cases(model, list_of_lists, output_filenames, folds, save_npz, num_t
                                             None, None,
                                             npz_file, None, force_separate_z, interpolation_order_z),)
                                           ))
+
 
     print("inference done. Now waiting for the segmentation export to finish...")
     _ = [i.get() for i in results]

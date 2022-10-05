@@ -15,7 +15,10 @@
 
 import argparse
 import torch
+from collections import OrderedDict
 
+from batchgenerators.utilities.file_and_folder_operations import *
+from nnunet.run.default_configuration import get_default_configuration
 from nnunet.inference.predict import predict_from_folder
 from nnunet.paths import default_plans_identifier, network_training_output_dir, default_cascade_trainer, default_trainer
 from batchgenerators.utilities.file_and_folder_operations import join, isdir, save_json
@@ -144,12 +147,28 @@ def main():
     model = args.model
     trainer_class_name = args.trainer_class_name
     cascade_trainer_class_name = args.cascade_trainer_class_name
-
     task_name = args.task_name
 
     if not task_name.startswith("Task"):
         task_id = int(task_name)
         task_name = convert_id_to_task_name(task_id)
+
+    plans_file, output_folder_name, dataset_directory, batch_dice, stage, \
+    trainer_class = get_default_configuration(model, task_name, trainer_class_name, args.plans_identifier)
+    
+    init_args = (plans_file, folds, output_folder_name, dataset_directory, batch_dice, stage, True,
+                          False, True)
+    name = trainer_class_name
+    plans =  load_pickle(plans_file)
+
+    info = OrderedDict()
+    info['init'] = init_args
+    info['name'] = name
+    # info['class'] = str(self.__class__)
+    info['plans'] = plans
+
+    write_pickle(info,  join(output_folder_name, "fold_" + str(folds[0]), "model_best.model.pkl"))
+    write_pickle(info,  join(output_folder_name, "fold_" + str(folds[0]), "model_final_checkpoint.model.pkl"))
 
     assert model in ["2d", "3d_lowres", "3d_fullres", "3d_cascade_fullres"], "-m must be 2d, 3d_lowres, 3d_fullres or " \
                                                                              "3d_cascade_fullres"

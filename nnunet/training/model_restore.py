@@ -58,7 +58,7 @@ def restore_model(pkl_file, checkpoint=None, train=False, fp16=None):
     name = info['name']
     search_in = join(nnunet.__path__[0], "training", "network_training")
     tr = recursive_find_python_class([search_in], name, current_module="nnunet.training.network_training")
-
+    print(tr)
     if tr is None:
         """
         Fabian only. This will trigger searching for trainer classes in other repositories as well
@@ -88,6 +88,8 @@ def restore_model(pkl_file, checkpoint=None, train=False, fp16=None):
     # ToDo Fabian make saves use kwargs, please...
 
     trainer = tr(*init)
+    print(trainer)
+    print(trainer.network)
 
     # We can hack fp16 overwriting into the trainer without changing the init arguments because nothing happens with
     # fp16 in the init, it just saves it to a member variable

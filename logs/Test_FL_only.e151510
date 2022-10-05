@@ -1,0 +1,3 @@
+/var/spool/slurm/d/job151510/slurm_script: line 15: cd: /scratch/tang.zitian/nnUNet_trained_models/nnUNet/3d_fullres/Task200_BraTS2021/nnUNetTrainer_FL__nnUNetPlansv2.1: No such file or directory
+/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/pkg_resources/__init__.py:1914: UserWarning: /mnt/beegfs/home/tang.zitian/nnUNet/._nnunet.egg-info could not be properly decoded in UTF-8
+  warnings.warn(msg)

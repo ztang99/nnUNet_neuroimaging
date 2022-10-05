@@ -31,7 +31,7 @@ preprocessing_output_dir = os.environ['nnUNet_preprocessed'] if "nnUNet_preproce
 # preprocessing_output_dir = preprocessing_output_dir[1:-1]
 network_training_output_dir_base = os.path.join(os.environ['RESULTS_FOLDER']) if "RESULTS_FOLDER" in os.environ.keys() else None
 
-print(preprocessing_output_dir)
+# print(preprocessing_output_dir)
 
 if base is not None:
     nnUNet_raw_data = join(base, "nnUNet_raw_data")
