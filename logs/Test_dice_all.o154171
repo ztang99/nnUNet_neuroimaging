@@ -1,0 +1,46 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Mon Oct 10 19:46:52 CDT 2022 1665449212
+Job ID:		154171
+Username:	tang.zitian
+Partition:	gpu
+End Slurm Prologue Mon Oct 10 19:46:52 CDT 2022 1665449212
+--------------------------------------------------------------
+
+
+Please cite the following paper when using nnUNet:
+
+Isensee, F., Jaeger, P.F., Kohl, S.A.A. et al. "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation." Nat Methods (2020). https://doi.org/10.1038/s41592-020-01008-z
+
+
+If you have questions or suggestions, feel free to open an issue at https://github.com/MIC-DKFZ/nnUNet
+
+saving lists to csv files... :)
+--------------------------------------------------------------
+Begin Slurm Epilogue Mon Oct 10 19:50:55 CDT 2022 1665449455
+Name                : Test_dice_all
+User                : tang.zitian
+Partition           : gpu
+Nodes               : gpu06
+Cores               : 10
+State               : COMPLETED
+Submit              : 2022-10-10T19:46:51
+Start               : 2022-10-10T19:46:52
+End                 : 2022-10-10T19:50:53
+Reserved Walltime   : 00:30:00
+Used Walltime       : 00:04:01
+Used CPU Time       : 00:03:48
+% User (Computation): 94.23%
+% System (I/O)      :  5.77%
+Mem Reserved        : 64G
+Max Mem Used        : 350.61M (367644672.0)
+Max Disk Write      : 0.00  (0.0)
+Max Disk Read       : 75.83M (79513518.08)
+Max-Mem-Used Node   : gpu06
+Max-Disk-Write Node : gpu06
+Max-Disk-Read Node  : gpu06
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    GPU Performance Statistics
+--------------------------------------------------------------
+GPU Model: Tesla V100-PCIE-32GB 
+End Slurm Epilogue Mon Oct 10 19:50:55 CDT 2022 1665449455
+--------------------------------------------------------------

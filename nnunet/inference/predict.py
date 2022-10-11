@@ -30,6 +30,7 @@ from nnunet.postprocessing.connected_components import load_remove_save, load_po
 from nnunet.training.model_restore import load_model_and_checkpoint_files
 from nnunet.training.network_training.nnUNetTrainer import nnUNetTrainer
 from nnunet.utilities.one_hot_encoding import to_one_hot
+# from nnunet.evaluation.region_based_evaluation import create_region_from_mask
 
 
 def preprocess_save_to_queue(preprocess_fn, q, list_of_lists, output_files, segs_from_prev_stage, classes,
@@ -179,13 +180,6 @@ def predict_cases(model, list_of_lists, output_filenames, folds, save_npz, num_t
 
     print("emptying cuda cache")
     torch.cuda.empty_cache()
-
-    """
-    ZT@9/30/22
-    we can probably change here to make sure we predict only folds that are not missiong
-    challenges: how to determine which modalities the current image has?
-    do we need to call this func multiple times? maybe modify the __main__ func
-    """
 
     print("loading parameters for folds,", folds)
     trainer, params = load_model_and_checkpoint_files(model, folds, mixed_precision=mixed_precision,
@@ -839,20 +833,50 @@ if __name__ == "__main__":
     elif all_in_gpu == "False":
         all_in_gpu = False
 
-    """
-    cannot use directly predict_from_folder since it will directly generate results (or can we just fuse existing
-    predictions after we get everything?)
-    Two possible ways to do this:
-    1: In each modes, before results.append() combine the results (but dunno how to do this :(((
-    2: After predict_from_folder generated all the results, see how the results are named (my guesses is that
-    somewhere in the middle they should have a substring of the patient ID that we can identify) try to read in the 
-    results (each pixel should be in probablities), get the average on each pixel and output the prediction file.
-    
-    Also needed: does nnUNet generate performance metrics itself or do we need to add code to handle this?
-    after we generate the 'fused result' we also need to compare it with the ground truth (maybe dice score?) not sure
-    """
 
     predict_from_folder(model, input_folder, output_folder, folds, save_npz, num_threads_preprocessing,
                         num_threads_nifti_save, lowres_segmentations, part_id, num_parts, tta,
                         mixed_precision=not args.disable_mixed_precision,
                         overwrite_existing=overwrite, mode=mode, overwrite_all_in_gpu=all_in_gpu, step_size=step_size)
+
+# """Methods related to dice calculation/generation"""
+
+# def dice(prediction, target):
+#     prediction = prediction.flatten()
+#     target = target.flatten()
+#     TP = np.sum(prediction[prediction != 0] == target[target != 0]) #(target[prediction != 0] != 0) is the same I think
+#     TN = np.sum(target[prediction == 0] == 0)
+#     FP = np.sum(target[prediction != 0] == 0)
+#     FN = np.sum(target[prediction == 0] != 0)
+
+#     sensitivity = TP / (TP + FN)
+#     specifity = TN / (TN + FP)
+#     dice = (2 * TP) / ((FP + TP) + (TP + FN))
+
+#     return dice, sensitivity, specifity
+
+# def get_brats_regions():
+#     """
+#     this is only valid for the brats data in here where the labels are 1, 2, and 3. The original brats data have a
+#     different labeling convention!
+#     :return:
+#     """
+#     regions = {
+#         "whole tumor": (1, 2, 3),
+#         "tumor core": (2, 3),
+#         "enhancing tumor": (3,),
+#         "ncr/net": (2,),
+#         "ed": (1,),
+#     }
+#     return regions
+
+# def evaluate_case(image_pred, image_gt, regions):
+#     results = []
+#     for k, r in regions.items():
+#         mask_pred = create_region_from_mask(image_pred, r)
+#         mask_gt = create_region_from_mask(image_gt, r)
+        
+#         dc = np.nan if np.sum(mask_gt) == 0 and np.sum(mask_pred) == 0 else metric.dc(mask_pred, mask_gt)
+#         results.append(dc)
+#     results.append(dice(image_pred, image_gt)) 
+#     return results # Dice of WT, TC, ET, NET/NCR, ALL classes
