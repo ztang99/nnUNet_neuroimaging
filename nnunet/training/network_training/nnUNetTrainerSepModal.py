@@ -26,12 +26,11 @@ from nnunet.training.data_augmentation.data_augmentation_moreDA import get_moreD
 from nnunet.training.loss_functions.deep_supervision import MultipleOutputLoss2
 from nnunet.utilities.to_torch import maybe_to_torch, to_cuda
 from nnunet.network_architecture.generic_UNet import Generic_UNet
-from nnunet.network_architecture import unet_model
 from nnunet.network_architecture.initialization import InitWeights_He
 from nnunet.network_architecture.neural_network import SegmentationNetwork
 from nnunet.training.data_augmentation.default_data_augmentation import default_2D_augmentation_params, \
     get_patch_size, default_3D_augmentation_params
-from nnunet.training.dataloading.my_dataset_loading import load_dataset, DataLoader3D, DataLoader2D, unpack_dataset
+from nnunet.training.dataloading.dataset_loading_sep_modals import load_dataset, DataLoader3D, DataLoader2D, unpack_dataset
 from nnunet.training.network_training.nnUNetTrainer import nnUNetTrainer
 from nnunet.utilities.nd_softmax import softmax_helper
 from sklearn.model_selection import KFold
@@ -42,7 +41,7 @@ from batchgenerators.utilities.file_and_folder_operations import *
 from nnunet.utilities.tensor_utilities import sum_tensor
 
 
-class nnUNetTrainerV2Modal(nnUNetTrainer):
+class nnUNetTrainerSepModal(nnUNetTrainer):
     """
     Info for Fabian: same as internal nnUNetTrainerV2_2
     """
@@ -53,8 +52,8 @@ class nnUNetTrainerV2Modal(nnUNetTrainer):
                          deterministic, fp16)
 
         self.modal = [0,1,2,3] # input different modalities [0-->T1, 1-->T1-contrast, 2-->T2, 3-->Flair]
-        self.max_num_epochs = 500 # number of epochs you want to train the model
-        self.num_batches_per_epoch = 100 # number of batches you want for each eopch[the nnUNet uses Infinite Dataloader]
+        self.max_num_epochs = 2000 # number of epochs you want to train the model
+        self.num_batches_per_epoch = 250 # number of batches you want for each eopch[the nnUNet uses Infinite Dataloader]
 
         self.initial_lr = 1e-3  # the initial learning rate
         self.deep_supervision_scales = None
@@ -163,13 +162,12 @@ class nnUNetTrainerV2Modal(nnUNetTrainer):
         dropout_op_kwargs = {'p': 0, 'inplace': True}
         net_nonlin = nn.LeakyReLU
         net_nonlin_kwargs = {'negative_slope': 1e-2, 'inplace': True}
-        self.network = unet_model(len(self.modal),self.num_classes)
-        # self.network = Generic_UNet(len(self.modal), self.base_num_features, self.num_classes,
-        #                             len(self.net_num_pool_op_kernel_sizes),
-        #                             self.conv_per_stage, 2, conv_op, norm_op, norm_op_kwargs, dropout_op,
-        #                             dropout_op_kwargs,
-        #                             net_nonlin, net_nonlin_kwargs, True, False, lambda x: x, InitWeights_He(1e-2),
-        #                             self.net_num_pool_op_kernel_sizes, self.net_conv_kernel_sizes, False, True, True)
+        self.network = Generic_UNet(1, self.base_num_features, self.num_classes,
+                                    len(self.net_num_pool_op_kernel_sizes),
+                                    self.conv_per_stage, 2, conv_op, norm_op, norm_op_kwargs, dropout_op,
+                                    dropout_op_kwargs,
+                                    net_nonlin, net_nonlin_kwargs, True, False, lambda x: x, InitWeights_He(1e-2),
+                                    self.net_num_pool_op_kernel_sizes, self.net_conv_kernel_sizes, False, True, True)
         if torch.cuda.is_available():
             self.network.cuda()
         self.network.inference_apply_nonlin = softmax_helper
