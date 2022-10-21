@@ -1,0 +1,42 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Wed Oct 19 13:25:19 CDT 2022 1666203919
+Job ID:		174970
+Username:	tang.zitian
+Partition:	small
+End Slurm Prologue Wed Oct 19 13:25:19 CDT 2022 1666203919
+--------------------------------------------------------------
+
+
+Please cite the following paper when using nnUNet:
+
+Isensee, F., Jaeger, P.F., Kohl, S.A.A. et al. "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation." Nat Methods (2020). https://doi.org/10.1038/s41592-020-01008-z
+
+
+If you have questions or suggestions, feel free to open an issue at https://github.com/MIC-DKFZ/nnUNet
+
+/scratch/tang.zitian/nnUNet_trained_models/nnUNet
+--------------------------------------------------------------
+Begin Slurm Epilogue Wed Oct 19 13:44:03 CDT 2022 1666205043
+Name                : run_sep_modals
+User                : tang.zitian
+Partition           : small
+Nodes               : node23
+Cores               : 4
+State               : COMPLETED
+Submit              : 2022-10-19T13:25:19
+Start               : 2022-10-19T13:25:19
+End                 : 2022-10-19T13:44:01
+Reserved Walltime   : 02:00:00
+Used Walltime       : 00:18:42
+Used CPU Time       : 00:15:58
+% User (Computation): 88.16%
+% System (I/O)      : 11.84%
+Mem Reserved        : 64G
+Max Mem Used        : 296.74M (311152640.0)
+Max Disk Write      : 12.45G (13363975290.9)
+Max Disk Read       : 14.94G (16045477724.2)
+Max-Mem-Used Node   : node23
+Max-Disk-Write Node : node23
+Max-Disk-Read Node  : node23
+End Slurm Epilogue Wed Oct 19 13:44:03 CDT 2022 1666205043
+--------------------------------------------------------------

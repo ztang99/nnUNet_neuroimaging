@@ -1,8 +1,8 @@
 #!/bin/bash
 ######## Job Name: Test_Job ########
-#SBATCH -J Train_all_modals
-#SBATCH -o logs/Train_all_modals.o%j
-#SBATCH -e logs/Train_all_modals.e%j
+#SBATCH -J Train_sep400
+#SBATCH -o logs/Train_sep400.o%j
+#SBATCH -e logs/Train_sep400.e%j
 ######## Number of nodes: 1 ########
 #SBATCH -N 1
 #SBATCH -n 1

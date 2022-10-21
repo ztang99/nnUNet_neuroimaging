@@ -1,0 +1,46 @@
+/var/spool/slurm/d/job173544/slurm_script: line 15: cd: /scratch/tang.zitian/nnUNet_trained_models/nnUNet/3d_fullres/Task200_BraTS2021/nnUNetTrainerSepModal__nnUNetPlansv2.1: No such file or directory
+/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/pkg_resources/__init__.py:1914: UserWarning: /mnt/beegfs/home/tang.zitian/nnUNet/._nnunet.egg-info could not be properly decoded in UTF-8
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/scratch/tang.zitian/anaconda3/bin/nnUNet_predict", line 33, in <module>
+    sys.exit(load_entry_point('nnunet', 'console_scripts', 'nnUNet_predict')())
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/inference/predict_simple.py", line 238, in main
+    predict_from_folder(model_folder_name, input_folder, output_folder, folds, save_npz, num_threads_preprocessing,
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/inference/predict.py", line 660, in predict_from_folder
+    return predict_cases(model, list_of_lists[part_id::num_parts], output_files[part_id::num_parts], folds,
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/inference/predict.py", line 217, in predict_cases
+    softmax = trainer.predict_preprocessed_data_return_seg_and_softmax(
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/training/network_training/nnUNetTrainerSepModal.py", line 269, in predict_preprocessed_data_return_seg_and_softmax
+    ret = super().predict_preprocessed_data_return_seg_and_softmax(data,
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/training/network_training/nnUNetTrainer.py", line 518, in predict_preprocessed_data_return_seg_and_softmax
+    ret = self.network.predict_3D(data, do_mirroring=do_mirroring, mirror_axes=mirror_axes,
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/network_architecture/neural_network.py", line 145, in predict_3D
+    res = self._internal_predict_3D_3Dconv_tiled(x, step_size, do_mirroring, mirror_axes, patch_size,
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/network_architecture/neural_network.py", line 384, in _internal_predict_3D_3Dconv_tiled
+    predicted_patch = self._internal_maybe_mirror_and_pred_3D(
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/network_architecture/neural_network.py", line 532, in _internal_maybe_mirror_and_pred_3D
+    pred = self.inference_apply_nonlin(self(x))
+  File "/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/network_architecture/generic_UNet.py", line 391, in forward
+    x = self.conv_blocks_context[d](x)
+  File "/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/network_architecture/generic_UNet.py", line 142, in forward
+    return self.blocks(x)
+  File "/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/network_architecture/generic_UNet.py", line 65, in forward
+    x = self.conv(x)
+  File "/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 607, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 602, in _conv_forward
+    return F.conv3d(
+RuntimeError: Given groups=1, weight of size [32, 1, 3, 3, 3], expected input[1, 4, 160, 192, 160] to have 1 channels, but got 4 channels instead
+slurmstepd: error: *** JOB 173544 ON gpu06 CANCELLED AT 2022-10-18T11:11:19 DUE TO TIME LIMIT ***

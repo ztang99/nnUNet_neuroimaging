@@ -52,7 +52,7 @@ class nnUNetTrainerSepModal(nnUNetTrainer):
                          deterministic, fp16)
 
         self.modal = [0,1,2,3] # input different modalities [0-->T1, 1-->T1-contrast, 2-->T2, 3-->Flair]
-        self.max_num_epochs = 2000 # number of epochs you want to train the model
+        self.max_num_epochs = 800 # number of epochs you want to train the model
         self.num_batches_per_epoch = 250 # number of batches you want for each eopch[the nnUNet uses Infinite Dataloader]
 
         self.initial_lr = 1e-3  # the initial learning rate

@@ -1,8 +1,8 @@
 #!/bin/bash
 ######## Job Name: Test_Job ########
-#SBATCH -J Generate_dice_csv
-#SBATCH -o logs/Generate_dice_csv.o%j
-#SBATCH -e logs/Generate_dice_csv.e%j
+#SBATCH -J Generate_dice_csv_sep
+#SBATCH -o logs/Generate_dice_csv_sep.o%j
+#SBATCH -e logs/Generate_dice_csv_sep.e%j
 ######## Number of nodes: 1 ########
 #SBATCH -N 1
 #SBATCH -n 1

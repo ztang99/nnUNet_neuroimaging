@@ -207,7 +207,7 @@ def predict_cases(model, list_of_lists, output_filenames, folds, save_npz, num_t
     for preprocessed in preprocessing:
         output_filename, (d, dct) = preprocessed
         all_output_files.append(all_output_files)
-        d = d[trainer.modal, ...]
+        # d = d[trainer.modal, ...]
         if isinstance(d, str):
             data = np.load(d)
             os.remove(d)

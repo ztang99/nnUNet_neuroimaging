@@ -1,0 +1,106 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Mon Oct 17 14:49:02 CDT 2022 1666036142
+Job ID:		171833
+Username:	tang.zitian
+Partition:	gpu
+End Slurm Prologue Mon Oct 17 14:49:02 CDT 2022 1666036142
+--------------------------------------------------------------
+
+
+Please cite the following paper when using nnUNet:
+
+Isensee, F., Jaeger, P.F., Kohl, S.A.A. et al. "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation." Nat Methods (2020). https://doi.org/10.1038/s41592-020-01008-z
+
+
+If you have questions or suggestions, feel free to open an issue at https://github.com/MIC-DKFZ/nnUNet
+
+/scratch/tang.zitian/nnUNet_trained_models/nnUNet
+/scratch/tang.zitian/nnUNet_preprocessed/Task200_BraTS2021/nnUNetPlansv2.1_verybig_plans_3D.pkl
+###############################################
+I am running the following nnUNet: 3d_fullres
+My trainer class is:  <class 'nnunet.training.network_training.nnUNetTrainerSepModal.nnUNetTrainerSepModal'>
+For that I will be using the following configuration:
+/scratch/tang.zitian/nnUNet_preprocessed/Task200_BraTS2021/nnUNetPlansv2.1_verybig_plans_3D.pkl
+num_classes:  3
+modalities:  {0: 'T1', 1: 'T1ce', 2: 'T2', 3: 'FLAIR'}
+use_mask_for_norm OrderedDict([(0, True), (1, True), (2, True), (3, True)])
+keep_only_largest_region None
+min_region_size_per_class None
+min_size_per_class None
+normalization_schemes OrderedDict([(0, 'nonCT'), (1, 'nonCT'), (2, 'nonCT'), (3, 'nonCT')])
+stages...
+
+stage:  0
+{'batch_size': 3, 'num_pool_per_axis': [5, 5, 5], 'patch_size': array([160, 192, 160]), 'median_patient_size_in_voxels': array([140, 171, 137]), 'current_spacing': array([1., 1., 1.]), 'original_spacing': array([1., 1., 1.]), 'do_dummy_2D_data_aug': False, 'pool_op_kernel_sizes': [[2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2]], 'conv_kernel_sizes': [[3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]]}
+
+I am using stage 0 from these plans
+I am using sample dice + CE loss
+
+I am using data from this folder:  /scratch/tang.zitian/nnUNet_preprocessed/Task200_BraTS2021/nnUNetData_plans_v2.1_verybig
+###############################################
+/scratch/tang.zitian/nnUNet_preprocessed/Task200_BraTS2021/nnUNetPlansv2.1_verybig_plans_3D.pkl
+using model stored in  /scratch/tang.zitian/nnUNet_trained_models/nnUNet/3d_fullres/Task200_BraTS2021/nnUNetTrainerSepModal__nnUNetPlansv2.1_verybig
+/scratch/tang.zitian/nnUNet_trained_models/nnUNet/3d_fullres/Task200_BraTS2021/nnUNetTrainerSepModal__nnUNetPlansv2.1_verybig/plans.pkl
+This model expects 4 input modalities for each image
+Found 313 unique case ids, here are some examples: ['BraTS2021_01576' 'BraTS2021_01387' 'BraTS2021_01523' 'BraTS2021_00619'
+ 'BraTS2021_00283' 'BraTS2021_01387' 'BraTS2021_00443' 'BraTS2021_01333'
+ 'BraTS2021_00514' 'BraTS2021_01172']
+If they don't look right, make sure to double check your filenames. They must end with _0000.nii.gz etc
+number of cases: 313
+number of cases that still need to be predicted: 313
+emptying cuda cache
+loading parameters for folds, [1]
+/scratch/tang.zitian/nnUNet_trained_models/nnUNet/3d_fullres/Task200_BraTS2021/nnUNetTrainerSepModal__nnUNetPlansv2.1_verybig/fold_1/model_final_checkpoint.model.pkl
+<class 'nnunet.training.network_training.nnUNetTrainerSepModal.nnUNetTrainerSepModal'>
+<nnunet.training.network_training.nnUNetTrainerSepModal.nnUNetTrainerSepModal object at 0x14ca4102acd0>
+None
+using the following model files:  ['/scratch/tang.zitian/nnUNet_trained_models/nnUNet/3d_fullres/Task200_BraTS2021/nnUNetTrainerSepModal__nnUNetPlansv2.1_verybig/fold_1/model_final_checkpoint.model']
+starting preprocessing generator
+starting prediction...
+predicting /scratch/tang.zitian/nnUNet_predictions/nnunet_sepmodals_predictions/BraTS2021_00063.nii.gz
+debug: mirroring True mirror_axes (0, 1, 2)
+step_size: 0.5
+do mirror: True
+data shape: (4, 160, 192, 160)
+patch size: [160 192 160]
+steps (x, y, and z): [[0], [0], [0]]
+number of tiles: 1
+--------------------------------------------------------------
+Begin Slurm Epilogue Mon Oct 17 15:19:30 CDT 2022 1666037970
+Name                : Test_sep_modal
+User                : tang.zitian
+Partition           : gpu
+Nodes               : gpu06
+Cores               : 10
+State               : CANCELLED,TIMEOUT
+Submit              : 2022-10-17T14:49:02
+Start               : 2022-10-17T14:49:02
+End                 : 2022-10-17T15:19:27
+Reserved Walltime   : 00:30:00
+Used Walltime       : 00:30:25
+Used CPU Time       : --
+% User (Computation): --
+% System (I/O)      : --
+Mem Reserved        : 64G
+Max Mem Used        : 10.95G (11753009152.0)
+Max Disk Write      : 59.74M (62641930.24)
+Max Disk Read       : 469.74M (492558090.24)
+Max-Mem-Used Node   : gpu06
+Max-Disk-Write Node : gpu06
+Max-Disk-Read Node  : gpu06
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    GPU Performance Statistics
+--------------------------------------------------------------
+GPU Model: Tesla V100-PCIE-32GB 
+*********************
+*****   gpu06   *****
+*********************
+processor 0 | % GPU Utilization   : Avg: 68, Max: 100, Min: 0
+            | % Memory Utilization: Avg: 40, Max: 70, Min: 0
+            | Max GPU Memory Used : 31.11 GB out of 32 GB
+processor 1 | % GPU Utilization   : Avg: 69, Max: 100, Min: 0
+            | % Memory Utilization: Avg: 36, Max: 69, Min: 0
+            | Max GPU Memory Used : 31.11 GB out of 32 GB
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+End Slurm Epilogue Mon Oct 17 15:19:30 CDT 2022 1666037970
+--------------------------------------------------------------

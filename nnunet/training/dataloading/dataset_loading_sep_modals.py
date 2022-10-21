@@ -362,40 +362,17 @@ class DataLoader3D(SlimDataLoaderBase):
                                           valid_bbox_y_lb:valid_bbox_y_ub,
                                           valid_bbox_z_lb:valid_bbox_z_ub]
 
-            ##############################################################################################
-            """
-            this loaded all data (except -1 - seg mask) together, 
-            which is the 4DxN case Aris mentioned (for all modality)
-            if we only put one modals as trainer input it will be 3DxN
-
-            Now, we need to modify it to load 3Dx4N (load 4 layers separately)
-            Basically, we want a for loop to loop each modality separately (from 0 to second last)
-
-            prev: j=0: data[0], seg[0,0]; j=1: data[1], seg[1,0]
-            now (allmodals): j=0: data[0,1,2,3]; j=1: data[4,5,6,7], etc.
-            thus data[4j, 4j+1, 4j+2, 4j+3]
-            """
-
-            # for m in range(0,len(case_all_data)):
-            #     data[4j+m] = np.pad(case_all_data[m], ((0, 0),
-            #                                         (-min(0, bbox_x_lb), max(bbox_x_ub - shape[0], 0)),
-            #                                         (-min(0, bbox_y_lb), max(bbox_y_ub - shape[1], 0)),
-            #                                         (-min(0, bbox_z_lb), max(bbox_z_ub - shape[2], 0))),
-            #                     self.pad_mode, **self.pad_kwargs_data)
-            
-            #     seg[4j+m, 0] = np.pad(case_all_data[-1:], ((0, 0),
-            #                                             (-min(0, bbox_x_lb), max(bbox_x_ub - shape[0], 0)),
-            #                                             (-min(0, bbox_y_lb), max(bbox_y_ub - shape[1], 0)),
-            #                                             (-min(0, bbox_z_lb), max(bbox_z_ub - shape[2], 0))),
-            #                     'constant', **{'constant_values': -1})
-
-            ##############################################################################################
-
             data[j] = np.pad(case_all_data[:-1], ((0, 0),
                                                   (-min(0, bbox_x_lb), max(bbox_x_ub - shape[0], 0)),
                                                   (-min(0, bbox_y_lb), max(bbox_y_ub - shape[1], 0)),
                                                   (-min(0, bbox_z_lb), max(bbox_z_ub - shape[2], 0))),
                              self.pad_mode, **self.pad_kwargs_data)
+
+            # data[j] = np.pad(case_all_data[selected_idx], ((0, 0),
+            #                                       (-min(0, bbox_x_lb), max(bbox_x_ub - shape[0], 0)),
+            #                                       (-min(0, bbox_y_lb), max(bbox_y_ub - shape[1], 0)),
+            #                                       (-min(0, bbox_z_lb), max(bbox_z_ub - shape[2], 0))),
+            #                  self.pad_mode, **self.pad_kwargs_data)
 
             seg[j, 0] = np.pad(case_all_data[-1:], ((0, 0),
                                                     (-min(0, bbox_x_lb), max(bbox_x_ub - shape[0], 0)),

@@ -1,15 +1,15 @@
 #!/bin/bash
 ######## Job Name: Test_Job ########
-#SBATCH -J Test_train_sep
-#SBATCH -o logs/Test_train_sep.o%j
-#SBATCH -e logs/Test_train_sep.e%j
+#SBATCH -J Train_sep
+#SBATCH -o logs/Train_sep.o%j
+#SBATCH -e logs/Train_sep.e%j
 ######## Number of nodes: 1 ########
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH --cpus-per-task 10
 #SBATCH --gres gpu:tesla_v100S:1
 #SBATCH --mem 64G 
-#SBATCH -t 2-00:00:00
+#SBATCH -t 4-12:00:00
  
 cd /home/tang.zitian/nnUNet
 # run script: sbatch scripts/train_nnunet_sep_modals.sh
