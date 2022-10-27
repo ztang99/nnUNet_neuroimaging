@@ -1,0 +1,15 @@
+/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/pkg_resources/__init__.py:1914: UserWarning: /mnt/beegfs/home/tang.zitian/nnUNet/._nnunet.egg-info could not be properly decoded in UTF-8
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/nibabel/loadsave.py", line 90, in load
+    stat_result = os.stat(filename)
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/tang.zitian/nnUNet_predictions/nnunet_NT1_predictions/BraTS2021_00032T1c.nii.gz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/beegfs/home/tang.zitian/nnUNet/tang_testing/majority_voting.py", line 39, in <module>
+    file2 = nib.load(os.path.join(path, subject_id + "T1c.nii.gz")).get_fdata().astype(np.uint8)
+  File "/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/nibabel/loadsave.py", line 92, in load
+    raise FileNotFoundError(f"No such file or no access: '{filename}'")
+FileNotFoundError: No such file or no access: '/scratch/tang.zitian/nnUNet_predictions/nnunet_NT1_predictions/BraTS2021_00032T1c.nii.gz'

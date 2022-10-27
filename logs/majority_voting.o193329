@@ -1,0 +1,36 @@
+--------------------------------------------------------------
+Begin Slurm Prologue Thu Oct 27 00:05:35 CDT 2022 1666847135
+Job ID:		193329
+Username:	tang.zitian
+Partition:	gpu
+End Slurm Prologue Thu Oct 27 00:05:35 CDT 2022 1666847135
+--------------------------------------------------------------
+--------------------------------------------------------------
+Begin Slurm Epilogue Thu Oct 27 00:09:18 CDT 2022 1666847358
+Name                : majority_voting
+User                : tang.zitian
+Partition           : gpu
+Nodes               : gpu06
+Cores               : 10
+State               : COMPLETED
+Submit              : 2022-10-27T00:05:34
+Start               : 2022-10-27T00:05:35
+End                 : 2022-10-27T00:09:16
+Reserved Walltime   : 01:00:00
+Used Walltime       : 00:03:41
+Used CPU Time       : 00:03:28
+% User (Computation): 75.96%
+% System (I/O)      : 24.04%
+Mem Reserved        : 64G
+Max Mem Used        : 597.18M (626192384.0)
+Max Disk Write      : 17.58M (18433966.08)
+Max Disk Read       : 69.23M (72592916.48)
+Max-Mem-Used Node   : gpu06
+Max-Disk-Write Node : gpu06
+Max-Disk-Read Node  : gpu06
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    GPU Performance Statistics
+--------------------------------------------------------------
+GPU Model: Tesla V100-PCIE-32GB 
+End Slurm Epilogue Thu Oct 27 00:09:18 CDT 2022 1666847358
+--------------------------------------------------------------

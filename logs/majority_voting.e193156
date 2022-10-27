@@ -1,0 +1,3 @@
+/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/pkg_resources/__init__.py:1914: UserWarning: /mnt/beegfs/home/tang.zitian/nnUNet/._nnunet.egg-info could not be properly decoded in UTF-8
+  warnings.warn(msg)
+python: can't open file '/mnt/beegfs/home/tang.zitian/nnUNet/nnunet/tang_testing/majority_voting.py': [Errno 2] No such file or directory

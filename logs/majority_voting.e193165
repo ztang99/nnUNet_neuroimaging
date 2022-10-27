@@ -1,0 +1,4 @@
+/scratch/tang.zitian/anaconda3/lib/python3.9/site-packages/pkg_resources/__init__.py:1914: UserWarning: /mnt/beegfs/home/tang.zitian/nnUNet/._nnunet.egg-info could not be properly decoded in UTF-8
+  warnings.warn(msg)
+/mnt/beegfs/home/tang.zitian/nnUNet/tang_testing/majority_voting.py:49: FutureWarning: Image data has type int64, which may cause incompatibilities with other tools. This will error in NiBabel 5.0. This warning can be silenced by passing the dtype argument to Nifti1Image().
+  img = nib.Nifti1Image(out, np.eye(4))
